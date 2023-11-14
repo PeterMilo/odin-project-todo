@@ -1,3 +1,6 @@
 # odin-project-todo
 
-Next step: Webpack setup --> "Creating a bundle"
+Next step: Start creating the app. Structure should be in place now. 
+
+This should still work: 
+npx webpack --watch
