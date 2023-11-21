@@ -13,3 +13,12 @@ export function createToDo (title, description, dueDate, priority) {
 
 };
 
+export function removeTodo() {
+    if (todoList.length > 0) {
+        const removedTodo = todoList.pop();
+        console.log(`Removed the latest todo:`, removedTodo);
+        console.log(todoList)
+      } else {
+        console.log(`No todos to remove.`);
+      }    
+}
