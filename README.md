@@ -1,7 +1,6 @@
 # odin-project-todo
 
-Next step: Figure out how to remove a todo. Right now I cant declare a global scope function in the index.js
-either and dont know why. So start there. Would just be nice to test first. 
+Next step: Create the form fillout and render logic for a new todo
 
 This should still work: 
 npx webpack --watch
