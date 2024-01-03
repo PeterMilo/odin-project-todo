@@ -22,3 +22,13 @@ export function removeTodo() {
         console.log(`No todos to remove.`);
       }    
 }
+
+// Change due date
+export function changeDueDate() {
+  console.log('Waiting');
+}
+
+// Change priority
+export function changePriority(priority, activeId) {
+    ToDo.priority = priority;
+}

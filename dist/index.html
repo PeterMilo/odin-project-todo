@@ -13,6 +13,29 @@
         <button id="add-todo">Add to-do</button>
         <button id="remove-todo">Remove to-do</button>
 
+        <form id="task-form">
+            <label for="title">Task</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="priority">Priority</label>
+            <input list="priority">
+            <datalist id="priority">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+            </datalist>
+
+            <label for="due-date">Due date</label>
+            <input type="date" id="date" name="date">
+
+            <button id="submit-button">Add</button>
+        </form>
+
     </div>
 </body>
 </html>
