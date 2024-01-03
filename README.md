@@ -1,7 +1,6 @@
 # odin-project-todo
 
-Next step: Form submit to send form content to the to-do object
-
+Next step: Create the form fillout and render logic for a new todo
 
 This should still work: 
 npx webpack --watch
