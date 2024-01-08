@@ -1,6 +1,6 @@
 # odin-project-todo
 
-Next step: Create the form fillout and render logic for a new todo
+Next step: Make the form editable (start by creating a edit buttun during render)
 
 This should still work: 
 npx webpack --watch

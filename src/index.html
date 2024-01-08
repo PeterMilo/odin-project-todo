@@ -9,31 +9,31 @@
 <body>
     <h1 class="h1-header">Hello there sirez!</h1>
 
+    <button id="add-todo">Add to-do</button>
+    <button id="remove-todo">Remove to-do</button>
+    <form id="task-form">
+        <label for="title">Task</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" required>
+
+        <input type="text" id="priorityInput" list="priority" placeholder="Select priority">
+        <datalist id="priority">
+          <option value="High"></option>
+          <option value="Medium"></option>
+          <option value="Low"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+        </datalist>
+
+        <label for="due-date">Due date</label>
+        <input type="date" id="date" name="date">
+
+        <button id="submit-button">Add</button>
+    </form>
     <div id="content">
-        <button id="add-todo">Add to-do</button>
-        <button id="remove-todo">Remove to-do</button>
 
-        <form id="task-form">
-            <label for="title">Task</label>
-            <input type="text" id="title" name="title" required>
-
-            <label for="description">Description</label>
-            <input type="text" id="description" name="description" required>
-
-            <input type="text" id="priorityInput" list="priority" placeholder="Select priority">
-            <datalist id="priority">
-              <option value="1"></option>
-              <option value="2"></option>
-              <option value="3"></option>
-              <option value="4"></option>
-              <option value="5"></option>
-            </datalist>
-
-            <label for="due-date">Due date</label>
-            <input type="date" id="date" name="date">
-
-            <button id="submit-button">Add</button>
-        </form>
 
     </div>
 </body>
