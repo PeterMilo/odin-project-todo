@@ -1,7 +1,7 @@
 import './style.css';
 import '../node_modules/normalize.css';
 import { createToDo, todoList, removeTodo } from './manage-todo';
-import { renderTodoList } from './render';
+import { renderTodoList, editButton } from './render';
 
 
 //
@@ -41,5 +41,12 @@ submitTodoButton.addEventListener('click', (event) => {
 removeTodoButton.addEventListener('click', () => {
   removeTodo();
 });
+
+contentDiv.addEventListener('click', (event) => {
+  if(event.target.classList.contains('edit-btn')) {
+    editButton();
+  }
+})
+
 
 

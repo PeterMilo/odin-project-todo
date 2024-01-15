@@ -1,6 +1,9 @@
 # odin-project-todo
 
-Next step: Make the form editable (start by creating a edit buttun during render)
+Next step: Make the form editable.
+Forms have ID. Now we need to edit the content of the clicked form.
+
+
 
 This should still work: 
 npx webpack --watch
