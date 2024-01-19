@@ -41,6 +41,7 @@ export function renderTodoList () {
     });
 }
 
-export function editButton () {
+export function renderEditForm (formId) {
+    console.log(formId);
     console.log('Edit ready');
 }

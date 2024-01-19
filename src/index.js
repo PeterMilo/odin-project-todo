@@ -1,7 +1,7 @@
 import './style.css';
 import '../node_modules/normalize.css';
 import { createToDo, todoList, removeTodo } from './manage-todo';
-import { renderTodoList, editButton } from './render';
+import { renderTodoList, renderEditForm } from './render';
 
 
 //
@@ -10,6 +10,10 @@ const contentDiv = document.querySelector('#content');
 const addTodoButton = document.getElementById('add-todo');
 const removeTodoButton = document.getElementById('remove-todo');
 const submitTodoButton = document.getElementById('submit-button');
+
+// Editing form
+const editingForm = document.getElementById('editing-form');
+const editingOverlay = document.getElementById('overlay');
 
 const todoForm = document.getElementById('task-form');
 
@@ -44,7 +48,10 @@ removeTodoButton.addEventListener('click', () => {
 
 contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('edit-btn')) {
-    editButton();
+    editingForm.classList.toggle('active');
+    editingOverlay.classList.toggle('active');
+    const formId = event.target.parentElement.id;
+    renderEditForm(formId);
   }
 })
 

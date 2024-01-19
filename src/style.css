@@ -9,3 +9,33 @@ h1 {
 #task-form {
     display: none;
 }
+
+/* Initially hide the form and the overlay */
+#editing-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white; /* Set the background color of the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 999; /* Set a z-index just below the form */
+}
+
+#overlay.active, #editing-form.active{
+  display: block;
+}
+

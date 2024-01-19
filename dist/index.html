@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self To-do list</title>
-
+    
 <script defer src="index.bundle.js"></script></head>
 <body>
+    <!-- Semi-transparent background -->
+    <div id="overlay"></div>
+
     <h1 class="h1-header">Hello there sirez!</h1>
 
     <button id="add-todo">Add to-do</button>
     <button id="remove-todo">Remove to-do</button>
+
+    <!-- Form for adding new to-do -->
     <form id="task-form">
         <label for="title">Task</label>
         <input type="text" id="title" name="title" required>
@@ -34,5 +39,25 @@
 
 
     </div>
+
+
+  <!-- Form when editing -->
+  <form id="editing-form">
+    <input type="text" id="edit-title" name="edit-title" placeholder="Title">
+    <br>
+    <input type="text" id="edit-description" name="edit-description" placeholder="Desciption">
+    <br>
+    <input type="text" id="priorityInput" list="priority" placeholder="Select priority">
+        <datalist id="priority">
+          <option value="High"></option>
+          <option value="Medium"></option>
+          <option value="Low"></option>
+        </datalist>
+    <br>
+    <input type="date" id="date" name="date">
+    <br>
+    <button id="edit-form-close-btn">Close</button>
+  </form>
+    
 </body>
 </html>
