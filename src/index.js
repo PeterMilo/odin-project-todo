@@ -1,7 +1,7 @@
 import './style.css';
 import '../node_modules/normalize.css';
-import { createToDo, todoList, removeTodo } from './manage-todo';
-import { renderTodoList, renderEditForm } from './render';
+import { createToDo, todoList, removeTodo, findTodo } from './manage-todo';
+import { renderTodoList, renderEditFormContent } from './render';
 
 
 //
@@ -51,7 +51,8 @@ contentDiv.addEventListener('click', (event) => {
     editingForm.classList.toggle('active');
     editingOverlay.classList.toggle('active');
     const formId = event.target.parentElement.id;
-    renderEditForm(formId);
+    const formData = findTodo(formId);
+    renderEditFormContent(formData);
   }
 })
 

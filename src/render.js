@@ -1,4 +1,4 @@
-import { todoList } from "./manage-todo";
+import { todoList, findTodo } from "./manage-todo";
 
 const contentDiv = document.querySelector('#content');
 
@@ -41,7 +41,9 @@ export function renderTodoList () {
     });
 }
 
-export function renderEditForm (formId) {
-    console.log(formId);
-    console.log('Edit ready');
+export function renderEditFormContent(form) {
+    let todoTitle = form.title;
+    let formTitle = document.querySelector('#edit-title');
+    formTitle.value = todoTitle;
+    console.log(form);
 }

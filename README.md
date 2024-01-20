@@ -1,9 +1,7 @@
 # odin-project-todo
 
 Next step: Make the form editable.
-Form ID passed to render.js function.
-Match the passed ID value with the form in our todo list, then set the values in the edit form to 
-equal those in the object.
+Finish filling out form with object values. 
 
 
 

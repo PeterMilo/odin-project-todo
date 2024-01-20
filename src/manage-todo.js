@@ -23,12 +23,20 @@ export function removeTodo() {
       }    
 }
 
+export function findTodo(formId) {
+  console.log('Finder function ready');
+  console.log(formId);
+  let foundForm;
+  todoList.forEach((item) => {
+    if(item.id == formId) {
+      foundForm = item;
+    };
+  })
+  return foundForm;
+}
+
 // Change due date
 export function changeDueDate() {
   console.log('Waiting');
 }
 
-// Change priority
-export function changePriority(priority, activeId) {
-    ToDo.priority = priority;
-}
