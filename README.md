@@ -1,8 +1,7 @@
 # odin-project-todo
 
 Next step: Make the form editable.
-Finish filling out form with object values. 
-
+Attach correct ID to form somehow to make connection between form values and todo object. 
 
 
 This should still work: 

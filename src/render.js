@@ -43,7 +43,17 @@ export function renderTodoList () {
 
 export function renderEditFormContent(form) {
     let todoTitle = form.title;
+    let todoDescription = form.description;
+    let todoPriority = form.priority;
+    let todoDue = form.dueDate;
+
     let formTitle = document.querySelector('#edit-title');
+    let formDescription = document.querySelector('#edit-description');
+    let formPriority = document.querySelector('#edit-priority');
+    let formDue = document.querySelector('#edit-date');
+
     formTitle.value = todoTitle;
-    console.log(form);
+    formDescription.value = todoDescription;
+    formPriority.value = todoPriority;
+    formDue.value = todoDue;
 }
