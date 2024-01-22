@@ -1,7 +1,7 @@
 # odin-project-todo
 
 Next step: Make the form editable.
-Attach correct ID to form somehow to make connection between form values and todo object. 
+Activate function in index.js (edit close button) to save the data typed in the form before it closes. Do this in manage-todo.js 
 
 
 This should still work: 

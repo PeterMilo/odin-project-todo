@@ -24,8 +24,7 @@ const todoDescription = document.getElementById('description');
 const todoPriority = document.getElementById('priorityInput'); 
 const todoDate = document.getElementById('date');
 
-console.log('Up and running!');
-//
+
  
 
 
@@ -44,6 +43,7 @@ submitTodoButton.addEventListener('click', (event) => {
   renderTodoList();
 } )
 
+// Close editing form at store new values in todo object
 editingCloseBtn.addEventListener('click', (event) => {
   event.preventDefault();
   
@@ -56,7 +56,7 @@ removeTodoButton.addEventListener('click', () => {
 });
 
 
-// Function to find the edit button belonging to the clicked to-do, then open edit form
+// Find the edit button belonging to the clicked to-do, then open edit form
 contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('edit-btn')) {
     editingForm.classList.toggle('active');
