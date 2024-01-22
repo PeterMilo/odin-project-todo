@@ -1,6 +1,6 @@
 import './style.css';
 import '../node_modules/normalize.css';
-import { createToDo, todoList, removeTodo, findTodo } from './manage-todo';
+import { createToDo, todoList, removeTodo, findTodo, saveEditTodo } from './manage-todo';
 import { renderTodoList, renderEditFormContent } from './render';
 
 
@@ -25,13 +25,20 @@ const todoPriority = document.getElementById('priorityInput');
 const todoDate = document.getElementById('date');
 
 
- 
+// Edit form variables
+const editTitle = document.getElementById('edit-title');
+const editDescription = document.getElementById('edit-description');
+const editPriority = document.getElementById('edit-priority');
+const editDate = document.getElementById('edit-date');
+
+
 
 
 
 addTodoButton.addEventListener('click', () => {
   todoForm.style.display = 'block';
 });
+
 
 // Submit button creates to-do object in todoList array and then activates function to display the to-dos
 submitTodoButton.addEventListener('click', (event) => {
@@ -43,13 +50,18 @@ submitTodoButton.addEventListener('click', (event) => {
   renderTodoList();
 } )
 
+
 // Close editing form at store new values in todo object
 editingCloseBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  
+  const editId = editingForm.getAttribute('data-id')
+
+  saveEditTodo(editTitle.value, editDescription.value, editPriority.value, editDate.value, editId);
+
   editingForm.classList.toggle('active');
   editingOverlay.classList.toggle('active');
 })
+
 
 removeTodoButton.addEventListener('click', () => {
   removeTodo();

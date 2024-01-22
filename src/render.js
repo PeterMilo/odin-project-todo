@@ -53,7 +53,6 @@ export function renderEditFormContent(form) {
 
     // Select form elements
     let editingForm = document.getElementById('editing-form');
-    // let formId = editingForm.getAttribute('data-id');
     let formTitle = document.querySelector('#edit-title');
     let formDescription = document.querySelector('#edit-description');
     let formPriority = document.querySelector('#edit-priority');

@@ -24,8 +24,6 @@ export function removeTodo() {
 }
 
 export function findTodo(formId) {
-  console.log('Finder function ready');
-  console.log(formId);
   let foundForm;
   todoList.forEach((item) => {
     if(item.id == formId) {
@@ -33,6 +31,19 @@ export function findTodo(formId) {
     };
   })
   return foundForm;
+}
+
+export function saveEditTodo (title, description, dueDate, priority, id) {
+  console.log(`Edit id is ${id}`)
+  todoList.forEach((item) => {
+    if (item.id == id) {
+      item.title = title;
+      item.description = description;
+      item.dueDate = dueDate;
+      item.priority = priority;
+    }
+  })
+  console.log(todoList);
 }
 
 // Change due date
