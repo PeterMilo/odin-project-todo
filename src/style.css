@@ -39,3 +39,9 @@ h1 {
   display: block;
 }
 
+.todo-item {
+  border-style: solid;
+  border-color: black;
+  margin: 1em;
+}
+

@@ -14,6 +14,7 @@ export function renderTodoList () {
         const todoPriority = document.createElement('p');
         const todoDate = document.createElement('p');
         const editBtn = document.createElement('button');
+        const deleteBtn = document.createElement('button');
 
         todoContainer.className = 'todo-item';
         todoContainer.id = todo.id;
@@ -22,12 +23,14 @@ export function renderTodoList () {
         todoPriority.className = 'todo-priority';
         todoDate.className = 'todo-date';
         editBtn.className = 'edit-btn';
+        deleteBtn.className = 'delete-btn';
 
         todoTitle.textContent = `${todo.title}`;
         todoDescription.textContent = "Details: " + `${todo.description}`;
         todoPriority.textContent = "Priority: " + `${todo.priority}`;
         todoDate.textContent = "Due on " + `${todo.dueDate}`;
         editBtn.textContent = "Edit";
+        deleteBtn.textContent = "Delete";
         
       
         todoContainer.appendChild(todoTitle);
@@ -35,6 +38,7 @@ export function renderTodoList () {
         todoContainer.appendChild(todoPriority);
         todoContainer.appendChild(todoDate);
         todoContainer.appendChild(editBtn);
+        todoContainer.appendChild(deleteBtn);
 
         contentDiv.appendChild(todoContainer);
 

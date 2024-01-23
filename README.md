@@ -1,8 +1,8 @@
 # odin-project-todo
 
 Next step: Make the form editable.
-Activate function in index.js (edit close button) to save the data typed in the form before it closes. Do this in manage-todo.js 
-
+Attach delete button to each todo item
+--> Finish button setup in index.js
 
 This should still work: 
 npx webpack --watch

@@ -1,11 +1,12 @@
 import {ToDo} from "./todo-object";
+import { renderTodoList } from "./render";
 
 export const todoList = [];
 
 export function createToDo (title, description, dueDate, priority) {
     const newID = Math.round( Math.random() * 1000 );
 
-    const newToDo = new ToDo (title, description, dueDate, priority, newID);
+    const newToDo = new ToDo (title, description, dueDate, priority, newID, false);
     
     // console.log(newToDo);
     todoList.push(newToDo);
@@ -18,6 +19,7 @@ export function removeTodo() {
         const removedTodo = todoList.pop();
         console.log(`Removed the latest todo:`, removedTodo);
         console.log(todoList)
+        renderTodoList();
       } else {
         console.log(`No todos to remove.`);
       }    
@@ -33,7 +35,7 @@ export function findTodo(formId) {
   return foundForm;
 }
 
-export function saveEditTodo (title, description, dueDate, priority, id) {
+export function saveEditTodo (title, description, priority, dueDate, id) {
   console.log(`Edit id is ${id}`)
   todoList.forEach((item) => {
     if (item.id == id) {
@@ -44,6 +46,7 @@ export function saveEditTodo (title, description, dueDate, priority, id) {
     }
   })
   console.log(todoList);
+  renderTodoList();
 }
 
 // Change due date
