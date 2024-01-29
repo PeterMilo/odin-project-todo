@@ -1,8 +1,7 @@
 # odin-project-todo
 
-Next step: Make the form editable.
-Attach delete button to each todo item
---> Finish button setup in index.js
+Next step: Add project structure to todos
+
 
 This should still work: 
 npx webpack --watch

@@ -63,9 +63,6 @@ editingCloseBtn.addEventListener('click', (event) => {
 })
 
 
-removeTodoButton.addEventListener('click', () => {
-  removeTodo();
-});
 
 
 // Find the edit button belonging to the clicked to-do, then open edit form
@@ -83,7 +80,8 @@ contentDiv.addEventListener('click', (event) => {
 // Find the delete button belonging to the clicked to-do, then open edit form
 contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('delete-btn')) {
-    
+    const formId = event.target.parentElement.id;
+    removeTodo(formId);
   }
 })
 

@@ -14,15 +14,14 @@ export function createToDo (title, description, dueDate, priority) {
 
 };
 
-export function removeTodo() {
-    if (todoList.length > 0) {
-        const removedTodo = todoList.pop();
-        console.log(`Removed the latest todo:`, removedTodo);
-        console.log(todoList)
-        renderTodoList();
-      } else {
-        console.log(`No todos to remove.`);
-      }    
+export function removeTodo(id) {
+
+    let todoToRemove = findTodo(id);
+
+    todoList.pop(todoToRemove);
+
+    renderTodoList();
+
 }
 
 export function findTodo(formId) {
