@@ -8,22 +8,26 @@ import { renderTodoList, renderEditFormContent } from './render';
 const contentDiv = document.querySelector('#content');
 
 const addTodoButton = document.getElementById('add-todo');
-const removeTodoButton = document.getElementById('remove-todo');
+const addProjectButton = document.getElementById('add-project');
 const submitTodoButton = document.getElementById('submit-button');
+const projectSubmitButton = document.getElementById('project-submit-button');
 
-// Editing form
-const editingForm = document.getElementById('editing-form');
-const editingOverlay = document.getElementById('overlay');
-const editingCloseBtn = document.getElementById('edit-form-close-btn');
 
+// Project form
+const projectForm = document.getElementById('project-form');
+
+
+// Todo form and variables to help save input to Todo List Object. 
 const todoForm = document.getElementById('task-form');
-
-// Todo form variables to help save input to Todo List Object. 
 const todoTitle = document.getElementById('title');
 const todoDescription = document.getElementById('description');
 const todoPriority = document.getElementById('priorityInput'); 
 const todoDate = document.getElementById('date');
 
+// Editing form
+const editingForm = document.getElementById('editing-form');
+const editingOverlay = document.getElementById('overlay');
+const editingCloseBtn = document.getElementById('edit-form-close-btn');
 
 // Edit form variables
 const editTitle = document.getElementById('edit-title');
@@ -38,6 +42,17 @@ const editDate = document.getElementById('edit-date');
 addTodoButton.addEventListener('click', () => {
   todoForm.style.display = 'block';
 });
+
+addProjectButton.addEventListener('click', () => {
+  console.log('Make new projects')
+  projectForm.style.display = 'block';
+});
+
+//Project submit
+projectSubmitButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  // ADD SUBMIT PROJECT FUNCTIONALITY HERE
+})
 
 
 // Submit button creates to-do object in todoList array and then activates function to display the to-dos

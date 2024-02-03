@@ -2,6 +2,7 @@ import {ToDo} from "./todo-object";
 import { renderTodoList } from "./render";
 
 export const todoList = [];
+export const projectList = [];
 
 export function createToDo (title, description, dueDate, priority) {
     const newID = Math.round( Math.random() * 1000 );
@@ -48,8 +49,5 @@ export function saveEditTodo (title, description, priority, dueDate, id) {
   renderTodoList();
 }
 
-// Change due date
-export function changeDueDate() {
-  console.log('Waiting');
-}
+
 

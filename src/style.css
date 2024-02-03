@@ -1,13 +1,17 @@
 body {
-    background-color: rgb(218, 218, 218);
+  background-color: rgb(218, 218, 218);
 }
 
 h1 {
-    color: rgb(24, 86, 69);
+  color: rgb(24, 86, 69);
 }
 
 #task-form {
-    display: none;
+  display: none;
+}
+
+#project-form {
+  display: none;
 }
 
 /* Initially hide the form and the overlay */

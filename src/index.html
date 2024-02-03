@@ -7,15 +7,22 @@
     
 </head>
 <body>
-    <!-- Semi-transparent background -->
-    <div id="overlay"></div>
+  
+  
+  
+  <!-- Semi-transparent background -->
+  <div id="overlay"></div>
+  
+  <h1 class="h1-header">Hello there sire!</h1>
+  
+  <button id="add-todo">Add to-do</button>
+  <button id="add-project">Add project</button>
+  
+  <div id="content"></div>
 
-    <h1 class="h1-header">Hello there sire!</h1>
-
-    <button id="add-todo">Add to-do</button>
 
     <!-- Form for adding new to-do -->
-    <form id="task-form">
+  <form id="task-form">
         <label for="title">Task</label>
         <input type="text" id="title" name="title" required>
 
@@ -33,12 +40,13 @@
         <input type="date" id="date" name="date">
 
         <button id="submit-button">Add</button>
-    </form>
-    <div id="content">
+  </form>
 
-
-    </div>
-
+  <!-- Form for adding project -->
+  <form id="project-form">
+    <input type="text" id="project-name" name="project-name" placeholder="Project name" required>
+    <button id="project-submit-button">Submit</button>
+  </form>
 
   <!-- Form when editing -->
   <form id="editing-form" data-id="">
