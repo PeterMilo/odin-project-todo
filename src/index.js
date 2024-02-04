@@ -1,6 +1,6 @@
 import './style.css';
 import '../node_modules/normalize.css';
-import { createToDo, todoList, removeTodo, findTodo, saveEditTodo } from './manage-todo';
+import { createToDo, todoList, removeTodo, findTodo, saveEditTodo, addProject, projectList } from './manage-todo';
 import { renderTodoList, renderEditFormContent } from './render';
 
 
@@ -15,6 +15,7 @@ const projectSubmitButton = document.getElementById('project-submit-button');
 
 // Project form
 const projectForm = document.getElementById('project-form');
+const projectName = document.getElementById('project-name');
 
 
 // Todo form and variables to help save input to Todo List Object. 
@@ -23,6 +24,7 @@ const todoTitle = document.getElementById('title');
 const todoDescription = document.getElementById('description');
 const todoPriority = document.getElementById('priorityInput'); 
 const todoDate = document.getElementById('date');
+const todoProject = document.getElementById('select-project');
 
 // Editing form
 const editingForm = document.getElementById('editing-form');
@@ -40,6 +42,13 @@ const editDate = document.getElementById('edit-date');
 
 
 addTodoButton.addEventListener('click', () => {
+  todoProject.innerHTML = "";
+  projectList.forEach(project => {
+    const option = document.createElement('option');
+    option.value = project;
+    option.text = project;
+    todoProject.add(option);
+  })
   todoForm.style.display = 'block';
 });
 
@@ -51,14 +60,16 @@ addProjectButton.addEventListener('click', () => {
 //Project submit
 projectSubmitButton.addEventListener('click', (event) => {
   event.preventDefault();
-  // ADD SUBMIT PROJECT FUNCTIONALITY HERE
+  addProject(projectName.value);
+  projectForm.reset();
+  projectForm.style.display = 'none';
 })
 
 
 // Submit button creates to-do object in todoList array and then activates function to display the to-dos
 submitTodoButton.addEventListener('click', (event) => {
   event.preventDefault();
-  createToDo(todoTitle.value, todoDescription.value, todoDate.value, todoPriority.value);
+  createToDo(todoTitle.value, todoDescription.value, todoDate.value, todoPriority.value, todoProject.value);
   todoForm.reset();
   todoForm.style.display = 'none';
   console.log(todoList)

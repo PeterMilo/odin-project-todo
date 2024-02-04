@@ -1,12 +1,12 @@
 # odin-project-todo
 
-Next step: Add project structure to todos
+Next step: CSS and page layout
 
 
-Project structure: Next --> Add submit functionality between index.js and manage-todo.js
 
-todolist > todo > project: value
 
+
+When page layout works and projects are displayed, THEN: 
 render project todolist -- looks for project -- filters/loops todos and only return with matching project
 
 

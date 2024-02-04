@@ -2,27 +2,26 @@ import {ToDo} from "./todo-object";
 import { renderTodoList } from "./render";
 
 export const todoList = [];
-export const projectList = [];
+export const projectList = ["None","Work", "Coding"];
 
-export function createToDo (title, description, dueDate, priority) {
+export function createToDo (title, description, dueDate, priority, project) {
     const newID = Math.round( Math.random() * 1000 );
 
-    const newToDo = new ToDo (title, description, dueDate, priority, newID, false);
+    const newToDo = new ToDo (title, description, dueDate, priority, newID, false, project);
     
-    // console.log(newToDo);
     todoList.push(newToDo);
     return newToDo;
-
 };
 
+export function addProject (project) {
+  projectList.push(project);
+  console.log(projectList);
+}
+
 export function removeTodo(id) {
-
     let todoToRemove = findTodo(id);
-
     todoList.pop(todoToRemove);
-
     renderTodoList();
-
 }
 
 export function findTodo(formId) {
