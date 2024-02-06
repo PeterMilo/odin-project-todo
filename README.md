@@ -2,6 +2,9 @@
 
 Next step: CSS and page layout
 
+- Make all forms pop up at center, using class name instead of current editing id
+- Grid layout for main elements
+- Grid layout structure for todos
 
 
 
