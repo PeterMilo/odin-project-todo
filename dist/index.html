@@ -4,70 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self To-do list</title>
-    
 <script defer src="index.bundle.js"></script></head>
+
 <body>
-  
-  
   
   <!-- Semi-transparent background -->
   <div id="overlay"></div>
   
-  <h1 class="h1-header">Hello there sire!</h1>
-  
-  <button id="add-todo">Add to-do</button>
-  <button id="add-project">Add project</button>
-  
-  <div id="content"></div>
-
-
+  <!-- Collection of forms -->
+  <div class="centered-modal-form">
+    
     <!-- Form for adding new to-do -->
-  <form id="task-form">
-        <label for="title">Task</label>
-        <input type="text" id="title" name="title" required>
+    <form id="task-form" class="form-layout">
+          <label for="title">Task</label>
+          <input type="text" id="title" name="title" required>
+  
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" required>
+  
+          <input type="text" id="priorityInput" list="priority" placeholder="Select priority">
+          <datalist id="priority">
+            <option value="High"></option>
+            <option value="Medium"></option>
+            <option value="Low"></option>
+          </datalist>
+  
+          <label for="due-date">Due date</label>
+          <input type="date" id="date" name="date">
+  
+          <label for="project">Assign to a project?</label>
+          <select name="project" id="select-project"></select>
+  
+          <button id="submit-button">Add</button>
+    </form>
+  
+    <!-- Form for adding project -->
+    <form id="project-form" class="form-layout">
+      <input type="text" id="project-name" name="project-name" placeholder="Project name" required>
+      <button id="project-submit-button">Submit</button>
+    </form>
+  
+    <!-- Form when editing -->
+    <form id="editing-form" data-id="" class="form-layout">
+      <input type="text" id="edit-title" name="edit-title" placeholder="Title">
+      <br>
+      <input type="text" id="edit-description" name="edit-description" placeholder="Desciption">
+      <br>
+      <input type="text" id="edit-priority" list="priority" placeholder="Select priority">
+          <datalist id="priority">
+            <option value="High"></option>
+            <option value="Medium"></option>
+            <option value="Low"></option>
+          </datalist>
+      <br>
+      <input type="date" id="edit-date" name="date">
+      <br>
+      <button id="edit-form-close-btn">Save</button>
+    </form>
 
-        <label for="description">Description</label>
-        <input type="text" id="description" name="description" required>
+  </div>
 
-        <input type="text" id="priorityInput" list="priority" placeholder="Select priority">
-        <datalist id="priority">
-          <option value="High"></option>
-          <option value="Medium"></option>
-          <option value="Low"></option>
-        </datalist>
+<div class="grid-container">
+  
+  <div class="header">
+    <!-- <h1 class="h1-header">Hello Again!</h1> -->
+    <button id="add-todo">Add to-do</button>
+  </div>
+  
+  
+  
+  <div class="main-content">
+    
+    <div id="content"></div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  <div class="side-bar">
+    <button id="add-project">Add project</button>
+  </div>
+  
+  
+  
+  <div class="footer">
+    <p>Self Service</p>
+  </div>
 
-        <label for="due-date">Due date</label>
-        <input type="date" id="date" name="date">
 
-        <label for="project">Assign to a project?</label>
-        <select name="project" id="select-project"></select>
+</div>
 
-        <button id="submit-button">Add</button>
-  </form>
 
-  <!-- Form for adding project -->
-  <form id="project-form">
-    <input type="text" id="project-name" name="project-name" placeholder="Project name" required>
-    <button id="project-submit-button">Submit</button>
-  </form>
 
-  <!-- Form when editing -->
-  <form id="editing-form" data-id="">
-    <input type="text" id="edit-title" name="edit-title" placeholder="Title">
-    <br>
-    <input type="text" id="edit-description" name="edit-description" placeholder="Desciption">
-    <br>
-    <input type="text" id="edit-priority" list="priority" placeholder="Select priority">
-        <datalist id="priority">
-          <option value="High"></option>
-          <option value="Medium"></option>
-          <option value="Low"></option>
-        </datalist>
-    <br>
-    <input type="date" id="edit-date" name="date">
-    <br>
-    <button id="edit-form-close-btn">Save</button>
-  </form>
+
+  
     
 </body>
 </html>

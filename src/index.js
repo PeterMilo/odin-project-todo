@@ -49,12 +49,15 @@ addTodoButton.addEventListener('click', () => {
     option.text = project;
     todoProject.add(option);
   })
+  editingOverlay.classList.toggle('active');
   todoForm.style.display = 'block';
 });
 
 addProjectButton.addEventListener('click', () => {
   console.log('Make new projects')
   projectForm.style.display = 'block';
+  editingOverlay.classList.toggle('active');
+
 });
 
 //Project submit
@@ -63,6 +66,7 @@ projectSubmitButton.addEventListener('click', (event) => {
   addProject(projectName.value);
   projectForm.reset();
   projectForm.style.display = 'none';
+  editingOverlay.classList.toggle('active');
 })
 
 
@@ -72,6 +76,7 @@ submitTodoButton.addEventListener('click', (event) => {
   createToDo(todoTitle.value, todoDescription.value, todoDate.value, todoPriority.value, todoProject.value);
   todoForm.reset();
   todoForm.style.display = 'none';
+  editingOverlay.classList.toggle('active');
   console.log(todoList)
   renderTodoList();
 } )
@@ -87,6 +92,7 @@ editingCloseBtn.addEventListener('click', (event) => {
   editingForm.classList.toggle('active');
   editingOverlay.classList.toggle('active');
 })
+
 
 
 
