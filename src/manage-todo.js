@@ -2,7 +2,16 @@ import {ToDo} from "./todo-object";
 import { renderTodoList } from "./render";
 
 export const todoList = [];
+
 export const projectList = ["None","Work", "Coding"];
+
+
+const testTodoOne = new ToDo ('Test','Test written for development','12-04-2024','High',1, 'false', 'Coding')
+todoList.push(testTodoOne);
+
+const testTodoTwo = new ToDo ('More Test','Test written for the sake of writing something more longwinded and nonesensical','12-06-2024','Low',2, 'false', 'Coding')
+todoList.push(testTodoTwo);
+
 
 export function createToDo (title, description, dueDate, priority, project) {
     const newID = Math.round( Math.random() * 1000 );

@@ -1,6 +1,21 @@
-import { todoList, findTodo } from "./manage-todo";
+import { todoList, projectList } from "./manage-todo";
 
 const contentDiv = document.querySelector('#content');
+const sidebarDiv = document.querySelector('#side-bar-content');
+
+
+export function renderProjectList () {
+    sidebarDiv.innerHTML = '';
+    projectList.forEach((project) => {
+        const projectDiv = document.createElement('div');
+
+        projectDiv.className = 'project-element';
+
+        projectDiv.textContent = project;
+
+        sidebarDiv.appendChild(projectDiv);
+    })
+}
 
 export function renderTodoList () {
     contentDiv.innerHTML = '';

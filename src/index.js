@@ -1,9 +1,10 @@
 import './style.css';
 import '../node_modules/normalize.css';
 import { createToDo, todoList, removeTodo, findTodo, saveEditTodo, addProject, projectList } from './manage-todo';
-import { renderTodoList, renderEditFormContent } from './render';
+import { renderTodoList, renderEditFormContent, renderProjectList } from './render';
 
-
+renderProjectList();
+renderTodoList();
 
 const contentDiv = document.querySelector('#content');
 
@@ -67,6 +68,7 @@ projectSubmitButton.addEventListener('click', (event) => {
   projectForm.reset();
   projectForm.style.display = 'none';
   editingOverlay.classList.toggle('active');
+  renderProjectList();
 })
 
 
