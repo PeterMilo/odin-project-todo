@@ -27,11 +27,23 @@ export function addProject (project) {
   console.log(projectList);
 }
 
+// export function removeTodo(id) {
+//     let todoToRemove = findTodo(id);
+//     todoList.pop(todoToRemove);
+//     renderTodoList();
+// }
+
 export function removeTodo(id) {
-    let todoToRemove = findTodo(id);
-    todoList.pop(todoToRemove);
-    renderTodoList();
+  const indexToRemove = todoList.findIndex(todo => todo.id == id);
+  if (indexToRemove !== -1) {
+      todoList.splice(indexToRemove, 1);
+      renderTodoList();
+  } else {
+      console.log(`Todo with ID ${id} not found.`);
+  }
 }
+
+
 
 export function findTodo(formId) {
   let foundForm;
