@@ -47,9 +47,24 @@ h1 {
 }
 
 .todo-item {
-  border-style: solid;
-  border-color: black;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
   margin: 1em;
+}
+
+.todo-right-div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+
+}
+
+.todo-left-div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
 }
 
 .grid-container {
@@ -63,29 +78,34 @@ h1 {
   "footer footer";
 }
 
+.header, .side-bar, .main-content, .footer, .form-layout {
+  background-color: rgba(255, 255, 255, 0.65);
+  margin: 1rem;
+  border-radius: 20px;
+}
+
 .header {
   display:flex;
   grid-area: header;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.65);
-  margin: 1rem;
+  border-radius: 0px;
+  margin: 0px;
 }
 
 .side-bar {
   grid-area: sidebar;
-  background-color: rgba(255, 255, 255, 0.65);
-  margin: 1rem;
 }
 
 .main-content {
   grid-area: main;
-  background-color: rgba(255, 255, 255, 0.65);
-  margin: 1rem;
 }
 
 .footer {
+  display: flex;
   grid-area: footer;
-  background-color: rgba(255, 255, 255, 0.65);
-  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  margin: 0px;
 }
 

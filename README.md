@@ -1,6 +1,10 @@
 # odin-project-todo
 
-Next step: CSS and page layout
+N
+!!! The restructure of elements means the event listeners for buttons
+no longer work - the elements are placed differently. Fix this.
+
+ext step: CSS and page layout
 
 - Make all forms pop up at center, using class name instead of current editing id
 - Grid layout for main elements
