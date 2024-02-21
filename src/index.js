@@ -14,6 +14,7 @@ const submitTodoButton = document.getElementById('submit-button');
 const projectSubmitButton = document.getElementById('project-submit-button');
 
 
+
 // Project form
 const projectForm = document.getElementById('project-form');
 const projectName = document.getElementById('project-name');
@@ -98,13 +99,13 @@ editingCloseBtn.addEventListener('click', (event) => {
 
 
 
-
 // Find the edit button belonging to the clicked to-do, then open edit form
 contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('edit-btn')) {
+    console.log('Edit registered');
     editingForm.classList.toggle('active');
     editingOverlay.classList.toggle('active');
-    const formId = event.target.parentElement.id;
+    const formId = event.target.parentElement.parentElement.id;
     const formData = findTodo(formId);
     renderEditFormContent(formData);
   }
@@ -114,7 +115,7 @@ contentDiv.addEventListener('click', (event) => {
 // Find the delete button belonging to the clicked to-do, then open edit form
 contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('delete-btn')) {
-    const formId = event.target.parentElement.id;
+    const formId = event.target.parentElement.parentElement.id;
     removeTodo(formId);
   }
 })
