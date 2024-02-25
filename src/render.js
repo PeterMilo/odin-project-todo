@@ -1,4 +1,5 @@
 import { todoList, projectList } from "./manage-todo";
+import { selectedProjectList } from "./index";
 
 const contentDiv = document.querySelector('#content');
 const sidebarDiv = document.querySelector('#side-bar-content');
@@ -20,8 +21,15 @@ export function renderProjectList () {
 export function renderTodoList () {
     contentDiv.innerHTML = '';
     console.log('Render function active')
+    let filteredTodoList = [];
 
-    todoList.forEach((todo) => {
+    if (selectedProjectList !== 'None') {
+        filteredTodoList = todoList.filter(todo => todo.project === selectedProjectList)
+    } else {
+        filteredTodoList = todoList;
+    }
+
+    filteredTodoList.forEach((todo) => {
         
         const todoContainer = document.createElement('div');
         const todoTitle = document.createElement('p');

@@ -132,7 +132,12 @@ p, div {
 }
 
 #side-bar-content > * {
-  margin-top: .6rem;
+  margin-top: 1rem;
+}
+
+.project-element {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .grid-container {

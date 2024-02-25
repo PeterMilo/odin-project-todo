@@ -3,6 +3,9 @@ import '../node_modules/normalize.css';
 import { createToDo, todoList, removeTodo, findTodo, saveEditTodo, addProject, projectList } from './manage-todo';
 import { renderTodoList, renderEditFormContent, renderProjectList } from './render';
 
+export let selectedProjectList
+
+
 renderProjectList();
 renderTodoList();
 
@@ -12,6 +15,7 @@ const addTodoButton = document.getElementById('add-todo');
 const addProjectButton = document.getElementById('add-project');
 const submitTodoButton = document.getElementById('submit-button');
 const projectSubmitButton = document.getElementById('project-submit-button');
+const projectItems = document.querySelectorAll('.project-element');
 
 
 
@@ -119,4 +123,16 @@ contentDiv.addEventListener('click', (event) => {
     removeTodo(formId);
   }
 })
+
+projectItems.forEach(item => {
+  item.addEventListener('click', handleProjectClick)
+})
+
+function handleProjectClick(event) {
+  const clickedProject = event.target.textContent;
+  selectedProjectList = clickedProject;
+  console.log(selectedProjectList);
+  renderTodoList();
+}
+
 

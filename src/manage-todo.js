@@ -27,11 +27,7 @@ export function addProject (project) {
   console.log(projectList);
 }
 
-// export function removeTodo(id) {
-//     let todoToRemove = findTodo(id);
-//     todoList.pop(todoToRemove);
-//     renderTodoList();
-// }
+
 
 export function removeTodo(id) {
   const indexToRemove = todoList.findIndex(todo => todo.id == id);
