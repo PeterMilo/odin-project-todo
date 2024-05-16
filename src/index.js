@@ -3,7 +3,7 @@ import '../node_modules/normalize.css';
 import { createToDo, todoList, removeTodo, findTodo, saveEditTodo, addProject, projectList } from './manage-todo';
 import { renderTodoList, renderEditFormContent, renderProjectList } from './render';
 
-export let selectedProjectList
+export let selectedProjectList = "None"
 
 
 renderProjectList();
