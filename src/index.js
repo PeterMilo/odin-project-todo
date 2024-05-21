@@ -15,7 +15,7 @@ const addTodoButton = document.getElementById('add-todo');
 const addProjectButton = document.getElementById('add-project');
 const submitTodoButton = document.getElementById('submit-button');
 const projectSubmitButton = document.getElementById('project-submit-button');
-const projectItems = document.querySelectorAll('.project-element');
+let projectItems = document.querySelectorAll('.project-element');
 
 
 
@@ -42,6 +42,7 @@ const editTitle = document.getElementById('edit-title');
 const editDescription = document.getElementById('edit-description');
 const editPriority = document.getElementById('edit-priority');
 const editDate = document.getElementById('edit-date');
+const editProject = document.getElementById('edit-project');
 
 
 
@@ -73,7 +74,14 @@ projectSubmitButton.addEventListener('click', (event) => {
   projectForm.reset();
   projectForm.style.display = 'none';
   editingOverlay.classList.toggle('active');
+
   renderProjectList();
+
+  // Ensure project lists are updated and interactable
+  projectItems = document.querySelectorAll('.project-element');
+  projectItems.forEach(item => {
+    item.addEventListener('click', handleProjectClick)
+  })
 })
 
 

@@ -51,7 +51,7 @@ export function findTodo(formId) {
   return foundForm;
 }
 
-export function saveEditTodo (title, description, priority, dueDate, id) {
+export function saveEditTodo (title, description, priority, dueDate, id, project) {
   console.log(`Edit id is ${id}`)
   todoList.forEach((item) => {
     if (item.id == id) {
@@ -59,6 +59,7 @@ export function saveEditTodo (title, description, priority, dueDate, id) {
       item.description = description;
       item.dueDate = dueDate;
       item.priority = priority;
+      item.project = project;
     }
   })
   console.log(todoList);

@@ -3,9 +3,7 @@
 
 
 Project list filter: Partly works. 
-- Troubleshoot why it does not work on initial render. 
-- Also check what breaks when a new project is added. 
-- Then add change of project to the edit-forms
+- Add a dynamic field to edit-form that is populated by the project list.
 
 
 This should still work: 
