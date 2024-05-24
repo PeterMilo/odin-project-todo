@@ -64,8 +64,24 @@ p, div {
   display: none;
 }
 
+#task-form input {
+  margin-bottom: 1em;
+}
+
 #project-form {
   display: none;
+}
+
+#project-form input {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+#submit-button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
 }
 
 
@@ -97,6 +113,8 @@ p, div {
 #overlay.active, #editing-form.active{
   display: block;
 }
+
+
 
 .todo-item {
   display: flex;

@@ -14,6 +14,7 @@ const contentDiv = document.querySelector('#content');
 const addTodoButton = document.getElementById('add-todo');
 const addProjectButton = document.getElementById('add-project');
 const submitTodoButton = document.getElementById('submit-button');
+const discardTodoButton = document.getElementById('task-discard-button');
 const projectSubmitButton = document.getElementById('project-submit-button');
 let projectItems = document.querySelectorAll('.project-element');
 
@@ -57,12 +58,12 @@ addTodoButton.addEventListener('click', () => {
     todoProject.add(option);
   })
   editingOverlay.classList.toggle('active');
-  todoForm.style.display = 'block';
+  todoForm.style.display = 'grid';
 });
 
 addProjectButton.addEventListener('click', () => {
   console.log('Make new projects')
-  projectForm.style.display = 'block';
+  projectForm.style.display = 'grid';
   editingOverlay.classList.toggle('active');
 
 });
@@ -96,6 +97,13 @@ submitTodoButton.addEventListener('click', (event) => {
   renderTodoList();
 } )
 
+discardTodoButton.addEventListener ('click', (event) => {
+  event.preventDefault();
+  todoForm.reset();
+  todoForm.style.display = 'none';
+  editingOverlay.classList.toggle('active');
+})
+
 
 // Close editing form at store new values in todo object
 editingCloseBtn.addEventListener('click', (event) => {
@@ -105,6 +113,7 @@ editingCloseBtn.addEventListener('click', (event) => {
   saveEditTodo(editTitle.value, editDescription.value, editPriority.value, editDate.value, editId);
 
   editingForm.classList.toggle('active');
+  editingForm.style.display = 'none';
   editingOverlay.classList.toggle('active');
 })
 
@@ -116,6 +125,7 @@ contentDiv.addEventListener('click', (event) => {
   if(event.target.classList.contains('edit-btn')) {
     console.log('Edit registered');
     editingForm.classList.toggle('active');
+    editingForm.style.display = 'grid';
     editingOverlay.classList.toggle('active');
     const formId = event.target.parentElement.parentElement.id;
     const formData = findTodo(formId);

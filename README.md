@@ -1,14 +1,14 @@
 # odin-project-todo
 
 
+Style:
+- Mark a task as "Done"
+- Clean up style and scalability of elements
+- Correct date format from form to to-do
+- Save data on local storage
 
-Project list filter: Partly works. 
-- Add a dynamic field to edit-form that is populated by the project list.
 
-
-This should still work: 
-npx webpack --watch
-
+Odin task: https://www.theodinproject.com/lessons/node-path-javascript-todo-list#project-solution 
 
 
 
